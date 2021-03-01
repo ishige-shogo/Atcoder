@@ -73,4 +73,3 @@ bit.each do |b|
     end
 end
 
-
