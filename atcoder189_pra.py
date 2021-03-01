@@ -11,6 +11,8 @@ print("{} {}".format(a+b+c, s))
 for i in range(n):
     a, b = map(int, input().split())
 
+A = list(map(int, input().split()))
+
 #------------------------------------------------------
 
 num = input()
@@ -32,3 +34,40 @@ for i in range(n):
         print(i+1)
         exit()
 print(-1)
+
+#--------------------------------------------------------
+#実行時間超過エラー
+
+n = int(input())
+a = list(map(int, input().split()))
+
+# (r-l+1)*x が最大になるとき
+# x = min(a[(l-1):r])
+
+r, orange = 1, 0
+
+while r <= n:
+    l = 1
+    while l <= r:
+        x = min(a[(l-1):r])
+        if orange < (r-l+1)*x:
+            orange = (r-l+1)*x
+        l += 1
+    r += 1
+
+print(orange)
+
+#pypyバージョン(こっちのほうが処理が速い)
+
+N = int(input())
+A = list(map(int,input().split()))
+
+ans=0
+for i in range(0,N):
+    x=A[i]
+    for k in range(i,N):
+        x=min(A[k],x)
+        ans = max(x*(k-i+1),ans)
+    
+print(ans)
+
