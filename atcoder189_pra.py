@@ -63,11 +63,13 @@ N = int(input())
 A = list(map(int,input().split()))
 
 ans=0
+# １つずつ確認していく方法
 for i in range(0,N):
     x=A[i]
     for k in range(i,N):
+        # xの値を記録しておく(２つを比べ、小さいほうをxとする)
         x=min(A[k],x)
+        # 答えを更新していく
         ans = max(x*(k-i+1),ans)
-    
 print(ans)
 
