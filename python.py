@@ -17,6 +17,12 @@ for i in range(n):
     x, y = map(int, input().split())
     ary.append((x, y))
 
+# 縦一列一文字バージョン
+s = list(input() for i in range(n))
+
+# 注意：縦一列一文字バージョン(重複したものを排除してる)
+s = set(input() for i in range(n))
+
 #-------------------------------------
 #よく使う繰り返し表現
 
