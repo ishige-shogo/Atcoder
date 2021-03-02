@@ -72,4 +72,3 @@ for i in range(0,N):
         # 答えを更新していく
         ans = max(x*(k-i+1),ans)
 print(ans)
-
