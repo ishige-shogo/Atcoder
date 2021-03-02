@@ -16,3 +16,12 @@ ary = []
 for i in range(n):
     x, y = map(int, input().split())
     ary.append((x, y))
+
+#-------------------------------------
+#よく使う繰り返し表現
+
+# (0,1)(0,2)(0,3)(1,2)(1,3)(2,3)...のように全てを調べる方法
+for s in range(n):
+    for t in list(range(s+1,n)):
+        break #←これは不要
+
