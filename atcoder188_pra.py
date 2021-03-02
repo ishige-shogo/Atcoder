@@ -34,3 +34,13 @@ a=list(zip(*[iter(A)]*int(2**N/2)))
 sem = min(max(a[0]),max(a[1]))
 # semが準優勝の数値なので、その順番を求める
 print(A.index(sem)+1)
+
+
+#上記の短縮バージョン
+N = int(input())
+A = list(map(int, input().split()))
+# Aの配列の要素を２つに分ける(仮に８つの要素の場合４:４にする)
+a=list(zip(*[iter(A)]*int(2**N/2)))
+# それぞれの最大の数値を比べ、小さいほうをsemとする
+# semが準優勝の数値なので、その順番を求める
+print(A.index(min(max(a[0]),max(a[1])))+1)
