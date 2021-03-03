@@ -59,3 +59,65 @@ for s in range(N):
     num = (s * a[s]) - (s * a[v])
     sum += num
 print(sum)
+
+
+#-----------------------------------------------------------
+# E問題
+
+#解法１：単純バージョン(実行時間エラー)
+T = int(input())
+V = [list(map(int,input().split())) for i in range(T)]
+
+for i in range(T):
+    m = 1
+    while True:
+        if (((V[i][2] * m) + V[i][1]) % V[i][0]) == 0:
+            print(m)
+            break
+        m += 1
+
+#------
+#試行中
+T = int(input())
+V = [list(map(int,input().split())) for i in range(T)]
+
+#一周で試行が終わる
+(V[i][0] - V[i][1]) % V[2] == 0
+#永遠にできない
+V[i][0] % V[i][2] == 0
+
+
+def circle(n, k):
+    n = n
+    x = n % k
+    if x == 0:
+        print(-1)
+    elif x == 1:
+        print("ok")
+    else:
+        circle(n, x)
+
+print(circle(8,3))
+
+print(8 %3)
+
+#-------------
+
+# N,S,K
+#(Km + S) と N の最小公倍数
+
+num1=684
+num2=1134
+
+#ユークリッドの互除法
+def gcd(a,b):
+    while b!=0:
+        a,b = b,a%b
+    return a
+
+#最小公倍数
+def lcm(a,b):
+    return int(a*b/gcd(a,b))
+
+print(gcd(num2,num1))
+print(lcm(num1,num2))
