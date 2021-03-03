@@ -17,3 +17,15 @@ for h in range(H):
         B.append(num)
 # 配列Bの数値の合計値から、Bの最小数値とBの要素数を掛けたものを引く
 print(sum(B) - (min(B) * len(B)))
+
+#-----------------------------------------------------------
+# C問題
+N = int(input())
+
+m = []
+for i in range(N):
+    oct_num = oct(i + 1)
+    str_num = str(i + 1)
+    if ("7" in str_num) or ("7" in oct_num):
+        m.append(i + 1)
+print(N - len(m))
