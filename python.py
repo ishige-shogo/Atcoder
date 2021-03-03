@@ -44,3 +44,8 @@ print(0x10) #16
 print(bin(10)) # 0b1010
 print(oct(10)) # 0o12
 print(hex(10)) # 0xa
+
+# 昇順降順
+A = [2,4,1,3,5]
+a = sorted(A) #1,2,3,4,5
+a = sorted(A, reverse=True) #5,4,3,2,1
