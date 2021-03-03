@@ -22,10 +22,12 @@ print(sum(B) - (min(B) * len(B)))
 # C問題
 N = int(input())
 
+# 1から検索する方法(数値iを文字列と８進数表記にし、いずれかに７が含まれているものをリストアップする)
 m = []
 for i in range(N):
     oct_num = oct(i + 1)
     str_num = str(i + 1)
     if ("7" in str_num) or ("7" in oct_num):
         m.append(i + 1)
+#全体からリストアップされた要素の個数を引く
 print(N - len(m))
