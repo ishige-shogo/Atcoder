@@ -20,14 +20,27 @@ for i in range(n):
 # 縦一列一文字バージョン
 s = list(input() for i in range(n))
 
+# 縦横に広がるバージョン:nは縦の個数
+v = [list(map(int,input().split())) for i in range(n)]
+
 # 注意：縦一列一文字バージョン(重複したものを排除してる)
 s = set(input() for i in range(n))
 
 #-------------------------------------
-#よく使う繰り返し表現
+#よく使う表現
 
 # (0,1)(0,2)(0,3)(1,2)(1,3)(2,3)...のように全てを調べる方法
 for s in range(n):
     for t in list(range(s+1,n)):
         break #←これは不要
 
+# 2,8,16進数
+# →10進数
+print(0b10) #2
+print(0o10) #8
+print(0x10) #16
+
+#　10進数→
+print(bin(10)) # 0b1010
+print(oct(10)) # 0o12
+print(hex(10)) # 0xa
