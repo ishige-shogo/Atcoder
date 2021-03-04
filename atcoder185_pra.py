@@ -72,3 +72,48 @@ def cmb(n, r):
 
 #植木算(仕切りを入れるパターン数を計算)
 print(cmb(L-1,11))
+
+#------------------------------------------------------------
+# D問題
+
+#切り上げメソッド用
+import math
+
+# n, m = 全体のマス数, 青色のマス数
+n, m = map(int, input().split())
+
+# 青マスが0のとき、1回の押印で終了
+if m == 0:
+    print(1)
+    exit()
+# 全てが青マスのとき、1回も押印せずに終了
+elif m == n:
+    print(0)
+    exit()
+
+# 小さい数値順に配列
+a = sorted(list(map(int, input().split())))
+
+# 青マス間の白マス数を記録(ただし0は除く)
+bet = []
+
+if (a[0] - 1) != 0:
+    bet.append(a[0] - 1)
+
+if m >= 2:
+    for i in range(m - 1):
+        if (a[i+1] - a[i] - 1) != 0:
+            bet.append(a[i+1] - a[i] - 1)
+    if (n - a[m-1]) != 0:
+        bet.append(n - a[m-1])
+
+# bet配列の最小値がスタンプの大きさになる
+stamp = min(bet)
+
+# 白マスにスタンプを押していく最小の回数を計算
+ans = 0
+for s in bet:
+    ans += math.ceil(s / stamp)
+
+print(ans)
+
