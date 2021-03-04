@@ -70,3 +70,8 @@ def cmb(n, r):
         if numerator[k] > 1:
             result *= int(numerator[k])
     return result
+    
+#切り上げ・切り捨て
+import math
+print(math.ceil(5.5)) # 切り上げ
+print(math.floor(5.5)) # 切り捨て
