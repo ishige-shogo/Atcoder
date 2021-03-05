@@ -75,3 +75,10 @@ def cmb(n, r):
 import math
 print(math.ceil(5.5)) # 切り上げ
 print(math.floor(5.5)) # 切り捨て
+
+
+# 1~10までのリスト化
+list(range(5)) #[0, 1, 2, 3, 4]
+list(range(3, 8)) #[3, 4, 5, 6, 7]
+list(range(5, 31, 5)) # [5, 10, 15, 20, 25, 30]
+list(range(100, -1, -10)) # [100, 90, 80, 70, 60, 50, 40, 30, 20, 10, 0]
