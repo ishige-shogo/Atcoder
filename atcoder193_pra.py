@@ -45,3 +45,4 @@ for i in range(2, m+1):
         s += 1
 # 重複した数値を除いたnumber配列の要素数を、全体から引いたものを出力
 print(n-len(set(number)))
+
