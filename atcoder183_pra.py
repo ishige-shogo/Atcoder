@@ -91,15 +91,18 @@ print("Yes")
 
 # 解法３
 
+# N, W = 人数, 毎分の供給量
 N, W = map(int, input().split())
+# 時刻sにpのお湯が必要になり、時刻tにpのお湯が不要になる
 event = []
-for _ in range(N):
+for i in range(N):
     s, t, p = map(int, input().split())
     event.append((s, p))
     event.append((t, -p))
+# 時刻順に並び替える
 event.sort()
 
-print(event)
+# event配列をもとに、カウントを増減していく。途中でWを超えたら終了。
 val = 0
 for t, v in event:
     val += v
@@ -108,4 +111,3 @@ for t, v in event:
         exit()
 print("Yes")
 
-[(1, 5), (2, 1), (2, 4), (3, -5), (3, 6), (4, -4), (4, -1), (10, -6)]
