@@ -53,3 +53,59 @@ for i in city:
     if sum == k:
         count += 1
 print(count)
+
+#---------------------------------------------------------
+# D問題
+
+# 解法１(実行時間エラー)
+n, w = map(int, input().split())
+
+s = [list(map(int,input().split())) for i in range(n)]
+
+water = [0]*(2*(10**5)+1)
+
+for i in range(n):
+    for c in range(s[i][0], s[i][1]):
+        water[c] += s[i][2]
+        if water[c] > w:
+            print("No")
+            exit()
+print("Yes")
+
+
+# 解法２：上記の改良バージョン(実行時間エラー)
+n, w = map(int, input().split())
+
+water = [0]*(2*(10**5)+1)
+
+for i in range(n):
+    s, t, p = map(int, input().split())
+    for c in range(s, t):
+        water[c] += p
+
+for z in water:
+    if z > w:
+        print("No")
+        exit()
+print("Yes")
+
+# 解法３
+
+N, W = map(int, input().split())
+event = []
+for _ in range(N):
+    s, t, p = map(int, input().split())
+    event.append((s, p))
+    event.append((t, -p))
+event.sort()
+
+print(event)
+val = 0
+for t, v in event:
+    val += v
+    if val > W:
+        print("No")
+        exit()
+print("Yes")
+
+[(1, 5), (2, 1), (2, 4), (3, -5), (3, 6), (4, -4), (4, -1), (10, -6)]
