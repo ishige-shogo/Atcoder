@@ -24,3 +24,24 @@ if v == 10**9+1:
     print(-1)
 else:
     print(v)
+
+
+#--------------------------------------------------------------
+# C問題
+import math
+# 整数ｎ
+n = int(input())
+# ２乗した時にn以上となる最小値m
+m = math.floor(n**(1/2))
+
+# iのs乗がn以下であるものをリスト化
+number = []
+for i in range(2, m+1):
+    s = 2
+    while True:
+        if i ** s > n:
+            break
+        number.append(i**s)
+        s += 1
+# 重複した数値を除いたnumber配列の要素数を、全体から引いたものを出力
+print(n-len(set(number)))
