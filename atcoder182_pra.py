@@ -67,3 +67,37 @@ elif sum(a_list) % 3 == 2:
             exit()
 # 上記のいずれにも合致しない場合、2つの数字を消去することで可能
 print(2)
+
+#-----------------------------------------------------------
+# D問題
+
+# 解法１：単純バージョン(実行時間エラー)
+n = int(input())
+a = list(map(int, input().split()))
+
+robot = 0
+ans = 0
+for i in range(n):
+    for s in range(0,(i+1)):
+        robot += a[s]
+        ans = max(ans, robot)
+print(ans)
+
+# 解法２
+# 数列の要素数
+n = int(input())
+# 数列
+a = list(map(int, input().split()))
+
+# point, robot, ans, v = 1行動の最大値, 1行動終了時のロボットの座標, 座標の最大値, 1行動を全て終えたときの移動値
+point = 0
+robot = 0
+ans = 0
+v = 0
+for s in range(n):
+    v += a[s]
+    point = max(point, v)
+    robot_max = robot + point
+    ans = max(ans, robot_max)
+    robot += v
+print(ans)
