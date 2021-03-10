@@ -54,3 +54,4 @@ while t > 0:
     ans *= t / n
     t -= 1
 print(ans)
+
