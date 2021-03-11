@@ -22,3 +22,16 @@ for i in range(len(s)):
             print("No")
             exit()
 print("Yes")
+
+#-----------------------------------------------------
+# C問題
+
+n, k = map(int, input().split())
+
+def kap(num):
+    num_a = str(num)
+    list_num_a = list(num_a)
+    a_list = [int(s) for s in list_num_a]
+    sorted(a_list, reverse=True)
+
+target_num_asc = int(''.join(sorted(str(target_num))))
