@@ -26,3 +26,20 @@ for i in range(n):
         print("Yes")
         exit()
 print("No")
+
+#----------------------------------------------------------
+# C問題
+
+# A*B+C=Nとなる組み合わせ(ABCは正の整数)
+n = int(input())
+count = 0
+# A,Bが決まればCは確定する。
+# Aの範囲は[1 ~ (n-1)] (nまでにするとC=0となるから)
+for i in range(1, n):
+    m = int(n/i)
+    # A*B=Nとならないように場合分け
+    if m * i == n:
+        count += m - 1
+    else:
+        count += m
+print(count)
