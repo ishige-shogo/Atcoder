@@ -35,3 +35,48 @@ for i in range(n):
                     count += 1
             ary = []
 print(count)
+
+#-----------------------------------------------------
+# C問題
+
+# 解法１：実行時間エラー
+x, k, d = map(int, input().split())
+
+for _ in range(k):
+    if x >= 0:
+        x -= d
+    else:
+        x += d
+
+print(abs(x))
+
+# 解法２(正解パターン)
+x, k, d = map(int, input().split())
+
+x, k, d = -3, 1, 1
+
+if abs(x) - (k * d) >= 0:
+    print(abs(x) - (k * d))
+    exit()
+
+k -= x//d
+x -= (x//d) * d
+
+if k % 2 == 0:
+    print(x)
+else:
+    print(abs(x-d))
+
+#----
+x, k, d = map(int, input().split())
+
+x, k, d = 13, 5, 3
+
+if x - (k * d) > 0:
+    print(x - (k * d))
+    exit()
+
+am = x//d
+bm = x//d + 1
+
+print(min(abs(x - (am * d)), abs(x - (am * d))))
