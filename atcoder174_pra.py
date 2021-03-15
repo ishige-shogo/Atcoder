@@ -21,3 +21,26 @@ for _ in range(n):
 print(count)
 
 #--------------------------------------------------------
+# C問題
+
+k = int(input())
+
+if k % 2 == 0:
+    print(-1)
+    exit()
+
+n = 1
+m = 7
+ans = 1
+
+while True:
+    if m % k == 0 and m >= k:
+        print(ans)
+        exit()
+    m += (10**n)*7
+    n += 1
+    ans += 1
+
+#---
+
+
