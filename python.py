@@ -23,6 +23,9 @@ s = list(input() for i in range(n))
 # 縦横に広がるバージョン:nは縦の個数
 v = [list(map(int,input().split())) for i in range(n)]
 
+# 上記同様バージョン
+v = [input() for _ in range(h)]
+
 # 注意：縦一列一文字バージョン(重複したものを排除してる)
 s = set(input() for i in range(n))
 
@@ -91,3 +94,7 @@ zero = [0] * 10 #[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 def has_duplicates(seq):
     return len(seq) != len(set(seq))
     
+# 小文字大文字の判別
+st = "apple"
+st.islower() #True
+st.isupper() #False
