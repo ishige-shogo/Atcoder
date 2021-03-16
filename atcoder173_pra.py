@@ -32,3 +32,25 @@ print("WA x "+str(wa))
 print("TLE x "+str(tle))
 print("RE x "+str(re))
 
+#---------------------------------------------------------
+# C問題
+
+h, w, k = map(int, input().split())
+
+c = [list(map(input().split())) for i in range(h)]
+
+
+
+
+
+
+# 番外編(両替機)
+n = 123456
+money = [10000, 5000, 2000, 1000, 500, 100, 50, 10, 5, 1]
+rest = []
+for coin in money:
+    rest.append(n // coin)
+    n %= coin
+for (m, r) in zip(money, rest):
+    print(str(m) + ":" + str(r))
+    
