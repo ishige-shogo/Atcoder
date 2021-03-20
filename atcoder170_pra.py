@@ -33,9 +33,18 @@ if n == 0:
 
 p = list(map(int, input().split()))
 
+if x not in p:
+    print(x)
+    exit()
 
-for i in range(101):
-    if i not in p:
-        
-
-
+con = 1
+while True:
+    ans = x - con
+    if ans not in p:
+        print(ans)
+        exit()
+    ans = x + con
+    if ans not in p:
+        print(ans)
+        exit()
+    con += 1
