@@ -23,3 +23,22 @@ if len(s) <= k:
     print(s)
 else:
     print(s[:k] + "...")
+
+#-----------------------------------------------------
+# C問題
+import math
+a, b, h, m = map(int, input().split())
+
+h = (h * 30) + (m * 0.5)
+m *= 6
+
+if abs(m - h) > 180:
+    r = 360 - abs(m - h)
+else:
+    r = abs(m - h)
+
+# 余弦定理
+# a**2 + b**2 - 2ab * cos c = c**2
+ans = ((a**2) + (b**2) - ((2*a*b)*(math.cos(math.radians(r)))))**(0.5)
+
+print(ans)
