@@ -101,3 +101,12 @@ def has_duplicates(seq):
 st = "apple"
 st.islower() #True
 st.isupper() #False
+
+# 要素同士の足し算
+import numpy as np
+array1 = np.array([[1, 2], [3, 4]])
+array2 = np.array([[10, 20], [30, 40]])
+array3 = array1 + array2
+print(array3)
+
+
