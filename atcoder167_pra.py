@@ -36,3 +36,21 @@ k -= b
 count -= k
 
 print(count)
+
+#----------------------------------------------------
+# C問題
+
+import itertools
+
+n, m, x = map(int, input().split())
+lis = [list(map(int,input().split())) for i in range(n)]
+
+result = []
+for n in range(1,len(lis)+1):
+    for conb in itertools.combinations(lis, n):
+        result.append(list(conb))
+print(result)
+
+
+
+
