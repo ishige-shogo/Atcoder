@@ -109,4 +109,9 @@ array2 = np.array([[10, 20], [30, 40]])
 array3 = array1 + array2
 print(array3)
 
+# 巨大な数値の異常性解消方法
+from decimal import Decimal
+i = "245673867548237383733920.9303725374845243748"
+
+print(int(Decimal(i)))
 
