@@ -52,3 +52,29 @@ x = "314159265358979323.8462643383279"
 print(int(Decimal(x)))
 
 #---------------------------------------
+# C問題
+
+import itertools
+
+n, m, q = map(int, input().split())
+
+ary = []
+for _ in range(q):
+    a, b, c, d = map(int, input().split())
+    ary.append((a-1,b-1,c,d))
+
+A = list(itertools.combinations_with_replacement(range(1,m+1), n))
+
+
+ans = 0
+
+for i in A:
+    count = 0
+    for s in ary:
+        if i[s[1]] - i[s[0]] == s[2]:
+            count += s[3]
+    ans = max(ans, count)
+
+print(ans)
+
+
