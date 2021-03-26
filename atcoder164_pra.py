@@ -21,3 +21,13 @@ while ((a > 0) and (c > 0)):
     if a <= 0:
         print("No")
         exit()
+
+#------------------------------------------------------
+# C問題
+
+n = int(input())
+
+s = set(input() for i in range(n))
+
+print(len(s))
+
