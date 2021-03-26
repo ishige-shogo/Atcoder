@@ -29,3 +29,26 @@ i = "245673867548237383733920.9303725374845243748"
 
 print(int(Decimal(i)))
 
+p = 234156738956839.9
+print(int(p))
+
+i = 5.90
+print(int(i))
+
+i = 3141592653589793238462643383279
+print(int(i))
+
+import math
+i = 314159265358979323.8462643383279
+print(math.floor(i))
+
+from decimal import Decimal
+x = 314159265358979323.8462643383279
+print(str(x))
+print(int(Decimal(x)))
+
+from decimal import Decimal
+x = "314159265358979323.8462643383279"
+print(int(Decimal(x)))
+
+#---------------------------------------
