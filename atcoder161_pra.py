@@ -17,3 +17,18 @@ if a[m-1] < sum(a)*(1/(4*m)):
     print("No")
 else:
     print("Yes")
+
+#-------------------------------------------------
+# C問題
+
+n, k = map(int, input().split())
+
+s = (n // k) + 1
+
+if n % k == 0:
+    print(0)
+    exit()
+
+ans = min((n%k),abs(n-(s*k)))
+
+print(ans)
