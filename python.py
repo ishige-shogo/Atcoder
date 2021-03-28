@@ -42,9 +42,9 @@ for s in range(n):
 
 # 2,8,16進数
 # →10進数
-print(0b10) #2
-print(0o10) #8
-print(0x10) #16
+print(int('10100', 2))
+print(int('24', 8))
+print(int('14', 16))
 
 #　10進数→
 print(bin(10)) # 0b1010
