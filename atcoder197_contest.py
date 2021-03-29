@@ -60,4 +60,22 @@ for i in range(2, n-1):
     x = a[:i]
     y = a[i:]
     for s in range(len(x)):
+        exit
+#---------------------
 
+N = int(input())
+A = list(map(int, input().split()))
+
+ans = 1 << 30
+for bit in range(1 << N-1):
+    memo_xor = 0
+    memo_or = A[0]
+    for i in range(N):
+        if (bit >> (N-1)-i) & 1:
+            memo_xor ^= memo_or
+            memo_or = A[i]
+        else:
+            memo_or |= A[i]
+    memo_xor ^= memo_or
+    ans = min(ans, memo_xor)
+print(ans)
