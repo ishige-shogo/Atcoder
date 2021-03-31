@@ -56,6 +56,10 @@ A = [2,4,1,3,5]
 a = sorted(A) #1,2,3,4,5
 a = sorted(A, reverse=True) #5,4,3,2,1
 
+#文字列の反転
+str = "asdfg"
+rslt = str[::-1]
+print(rslt) # "gfdsa"
 
 # 組み合わせの数：nCr
 def cmb(n, r):
