@@ -34,3 +34,35 @@ for i in range(1001):
         exit()
 print(-1)
 
+#------------------------------------------------------
+# D問題
+import sys
+from collections import deque
+
+input = sys.stdin.readline
+
+def main():
+    s = input()
+    ans = deque()
+    for i in s:
+        ans.append(i)
+    q = int(input())
+    reverse = False
+    for _ in range(q):
+        query = input().split()
+        if query[0] == "1":
+            reverse = not reverse
+        else:
+            if (query[1] == "1" and not reverse) or (query[1] == "1" and reverse):
+                ans.appendleft(query[2])
+            else:
+                ans.append(query[2])
+    ans = list(ans)
+    if reverse:
+        print(*ans[::-1], sep="")
+    else:
+        print(*ans, sep="")
+
+if __name__ == '__main__':
+    main()
+
