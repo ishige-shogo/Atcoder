@@ -9,17 +9,14 @@ else:
 
 # B問題
 
-# 誤解答
 n, k = map(int, input().split())
 
-ans = 0
-while True:
+ans = 1
+while n >= k:
     n = n // k
     ans += 1
-    if n < k:
-        ans += 1
-        print(ans)
-        exit()
+
+print(ans)
 
 #--------------------------------
 # C問題
