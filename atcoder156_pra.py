@@ -21,3 +21,17 @@ print(ans)
 #--------------------------------
 # C問題
 
+n = int(input())
+x = list(map(int, input().split()))
+
+a, b = min(x), max(x)
+ans = 10**20
+
+for i in range(a, b+1):
+    count = 0
+    for s in x:
+        count += abs((s-i)**2)
+    ans = min(ans, count)
+
+print(ans)
+
