@@ -12,3 +12,9 @@ elif a == c:
     print("Yes")
 else:
     print("No")
+
+# B問題
+
+n = int(input())
+a = list(map(int, input().split()))
+
