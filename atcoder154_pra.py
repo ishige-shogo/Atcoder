@@ -32,12 +32,14 @@ else:
 
 n, k = map(int, input().split())
 p = list(map(int, input().split()))
-ans = sum(p[:k])
-d = 0
+
+cnt = sum(p[:k])
 m = 0
+d = 0
+
 for i in range(n-k):
     d += p[i+k] - p[i]
-    m = max(d, m)
-ans += m
-print((ans + k) / 2)
+    m = max(m, d)
+ans = cnt + m
 
+print((k+ans)/2)
