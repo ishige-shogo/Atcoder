@@ -28,10 +28,21 @@ for i in a:
 print("APPROVED")
 
 # C問題
-from collections import Counter
 n = int(input())
-
-ary = []
+ary = {}
+ma = 1
 for _ in range(n):
-    ary.append(input())
-print(Counter(ary))
+    k = input()
+    if k in ary:
+        ary[k] += 1
+        ma = max(ma, ary[k])
+    else:
+        ary[k] = 1
+l = []
+
+for i in ary:
+    if ary[i] == ma:
+        l.append(i)
+l.sort()
+for i in l:
+    print(i)
