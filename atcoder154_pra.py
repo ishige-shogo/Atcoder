@@ -10,3 +10,9 @@ else:
     b -= 1
 
 print(a, b)
+
+# B問題
+
+s = input()
+
+print("x" * len(s))
