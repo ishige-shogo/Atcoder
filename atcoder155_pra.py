@@ -27,3 +27,11 @@ for i in a:
 
 print("APPROVED")
 
+# C問題
+from collections import Counter
+n = int(input())
+
+ary = []
+for _ in range(n):
+    ary.append(input())
+print(Counter(ary))
