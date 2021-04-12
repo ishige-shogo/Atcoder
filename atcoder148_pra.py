@@ -27,3 +27,19 @@ a, b = map(int, input().split())
 print(int((a*b)/math.gcd(a, b)))
 
 # D問題
+
+n = int(input())
+a = list(map(int, input().split()))
+
+if 1 not in a:
+    print(-1)
+    exit()
+
+cnt = 1
+ans = 0
+for i in a:
+    if cnt == i:
+        cnt += 1
+    else:
+        ans += 1
+print(ans)
