@@ -43,3 +43,32 @@ for i in a:
     else:
         ans += 1
 print(ans)
+
+# E問題
+import math
+n = int(input())
+
+if n % 2 != 0:
+    print(0)
+    exit()
+
+num = 10
+ans = 0
+while n >= num:
+    ans += n // num
+    num *= 10
+
+num = 50
+
+while n >= num:
+    ans += math.ceil((n // num) / 2)
+    num *= 10
+
+print(ans)
+
+n = 150
+ans = 1
+while n > 0:
+    ans *= n
+    n -= 2
+print(ans)
