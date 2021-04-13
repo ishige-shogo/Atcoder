@@ -19,3 +19,18 @@ for i in range(len(s)):
         ans += 1
 
 print(ans/2)
+
+# C問題
+
+n = int(input())
+
+X = []
+for i in range(n):
+    a = int(input())
+    Y = []
+    for s in range(a):
+        x, y = map(int, input().split())
+        Y.append([x,y])
+    X.append(Y)
+
+print(X)
