@@ -19,3 +19,16 @@ for i in s:
 
 print(ans)
 
+# C問題
+
+a, b, x = map(int, input().split())
+
+left, right = 0, 10**9+1
+
+while left+1 < right:
+    middle = (left + right) // 2
+    if x >= (a * middle) + (b * len(str(middle))):
+        left = middle
+    else:
+        right = middle
+print(left)
