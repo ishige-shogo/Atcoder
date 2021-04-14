@@ -32,3 +32,26 @@ while left+1 < right:
     else:
         right = middle
 print(left)
+
+# D問題
+
+n = int(input())
+point = []
+for i in range(n):
+    point.append([0])
+ans = []
+for _ in range(n-1):
+    a, b = map(int, input().split())
+    num = 1
+    while True:
+        if (num not in point[a-1]) and (num not in point[b-1]):
+            point[a-1].append(num)
+            point[b-1].append(num)
+            break
+        else:
+            num += 1
+    ans.append(num)
+
+print(max(ans))
+for i in ans:
+    print(i)
