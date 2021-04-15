@@ -39,3 +39,25 @@ for i in p:
 print(dist / count)
 
 
+#-----
+
+n = int(input())
+
+point = []
+for _ in range(n):
+    x, y = map(int, input().split())
+    point.append([x, y])
+
+dist = 0
+for i in range(n):
+    for s in range(i+1, n):
+        dist += ((point[i][0]-point[s][0])**2 + (point[i][1]-point[s][1])**2)**(1/2)
+num = 2
+for t in range(1, n):
+    num *= t
+
+cnt = 1
+for v in range(1, n+1):
+    cnt *= v
+
+print((dist * num) / cnt)
