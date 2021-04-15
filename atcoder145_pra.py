@@ -61,3 +61,21 @@ for v in range(1, n+1):
     cnt *= v
 
 print((dist * num) / cnt)
+
+
+# D問題
+import math
+
+x, y = map(int, input().split())
+
+a = (2*y - x) / 3
+b = (2*x - y) / 3
+
+if a != int(a) or b != int(b):
+    print(0)
+    exit()
+
+a = pow(4, -1, 20)
+
+print(a)
+
