@@ -32,3 +32,24 @@ for i in range(1, h+1):
 
 print(ans)
 
+# D問題
+import math
+
+a, b, x = map(int, input().split())
+
+if (a**2) * b == x:
+    print(0)
+    exit()
+
+h = x / (a**2)
+
+if h >= (b * 0.5):
+    ans = math.degrees(math.atan(a / (2 * b - 2 * h)))
+    print(90 - ans)
+else:
+    n = (2 * a * h) / b
+    ans = math.degrees(math.atan(n / b))
+    print(90 - ans)
+
+
+
