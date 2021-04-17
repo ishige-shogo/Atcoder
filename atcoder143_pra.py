@@ -8,3 +8,21 @@ if l <= 0:
     print(0)
 else:
     print(l)
+
+# B問題
+
+n = int(input())
+a = list(map(int, input().split()))
+ans = 0
+for i in a:
+    ans += (sum(a) - i) * i
+print(ans//2)
+
+#別解
+n = int(input())
+a = list(map(int, input().split()))
+ans = 0
+for i in range(n):
+    for s in range(i+1, n):
+        ans += a[i]*a[s]
+print(ans)
