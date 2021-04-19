@@ -34,5 +34,17 @@ L=" ".join(L)
 print(L)
 
 
+# D問題
+
+def GCD(a,b):
+    if b==0:
+        return a
+    else:
+        return GCD(b,a%b)
+
+a,b=map(int,input().split())
+n=GCD(a,b)
+print(n)
+
 
 
