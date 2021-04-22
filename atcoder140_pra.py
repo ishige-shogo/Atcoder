@@ -22,3 +22,11 @@ for i in a:
 
 print(ans)
 
+# C問題
+
+n = int(input())
+b = list(map(int, input().split()))
+
+
+
+
