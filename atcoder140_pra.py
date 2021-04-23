@@ -27,6 +27,12 @@ print(ans)
 n = int(input())
 b = list(map(int, input().split()))
 
+225
 
+ans = [b[0]]
 
+for i in range(1, n):
+    if b[i] >= b[i-1]:
+        ans.append(b[i-1])
+    else:
 
