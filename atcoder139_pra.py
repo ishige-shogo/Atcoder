@@ -18,3 +18,6 @@ print(math.ceil((b-a)/(a-1))+1)
 
 # C問題
 
+
+
+c
