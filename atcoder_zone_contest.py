@@ -54,6 +54,6 @@ else:
 n, d, h = map(int, input().split())
 for _ in range(n):
     x, y = map(int, input().split())
-    cnt = h - (((d-x)/(h-y))*d)
-    ans = max(cnt,0)
+    cnt = y - (((h-y)/(d-x))*x)
+    ans = max(cnt,ans)
 print(ans)
